@@ -7,9 +7,11 @@ spring:
   profiles: dev
 hosts: localhost:36321,localhost:36322
 destFolder: coverage
+fileName: result.exec
 
 ---
 spring:
   profiles: prod
 hosts: ${hosts}
 destFolder: ${DEST_FOLDER}
+fileName: ${FILE_NAME}

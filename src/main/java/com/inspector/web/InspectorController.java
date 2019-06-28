@@ -15,8 +15,8 @@ public class InspectorController {
     private final InspectorService inspectorService;
 
     @PostMapping("/dump")
-    public ResponseEntity dump(String fileName) {
-        return ResponseEntity.of(Optional.of(inspectorService.dump(fileName)));
+    public ResponseEntity dump() {
+        return ResponseEntity.of(Optional.of(inspectorService.dump()));
     }
 
 }

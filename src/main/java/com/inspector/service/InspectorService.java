@@ -16,7 +16,10 @@ public class InspectorService {
     @Value("${destFolder}")
     private String destFolder;
 
-    public boolean dump(String fileName) {
+    @Value("${fileName}")
+    private String fileName;
+
+    public boolean dump() {
         for (String host : hosts) {
             String[] addressAndPort = host.split(":");
             if (addressAndPort.length < 2) {
